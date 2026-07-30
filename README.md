@@ -1,2 +1,0 @@
-# DAA-practicals
-new repo
