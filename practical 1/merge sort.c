@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void merge(int arr[], int start, int mid, int end)
 {
     int temp[100];
