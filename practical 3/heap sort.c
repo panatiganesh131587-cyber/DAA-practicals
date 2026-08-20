@@ -7,13 +7,11 @@ void heapSort(int arr[], int n)
         left = 2 * i + 1;
         right = 2 * i + 2;
         largest = i;
-
+        
         if (left < n && arr[left] > arr[largest])
             largest = left;
-
         if (right < n && arr[right] > arr[largest])
             largest = right;
-
         if (largest != i)
         {
             temp = arr[i];
@@ -21,7 +19,6 @@ void heapSort(int arr[], int n)
             arr[largest] = temp;
         }
     }
-
     for (i = n - 1; i > 0; i--)
     {
         temp = arr[0];
@@ -49,24 +46,25 @@ void heapSort(int arr[], int n)
 
 int main()
 {
-    int arr[7] = {3, 5, 10, 8, 15, 7, 12};
-    int n = 7, i;
-
+    int n, i;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d numbers:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
     printf("Original array: ");
-
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
-
     heapSort(arr, n);
-
     printf("\nSorted array: ");
-
     for (i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
-
     return 0;
 }
